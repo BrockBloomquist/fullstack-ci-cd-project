@@ -2,31 +2,32 @@ import Table from "react-bootstrap/Table";
 
 export function SmallExample() {
   return (
-    <Table striped bordered hover size="sm">
+    <Table striped bordered hover size="sm" className="overflow-auto">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>Full Name</th>
+          <th>Email</th>
           <th>Username</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="m-3">
         <tr>
           <td>1</td>
           <td>Mark</td>
-          <td>Otto</td>
+          <td>otto@test.com</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <td>2</td>
           <td>Jacob</td>
-          <td>Thornton</td>
+          <td>jacon@test.com</td>
           <td>@fat</td>
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
+          <td>Larry the Bird</td>
+          <td>larry@test.com</td>
           <td>@twitter</td>
         </tr>
       </tbody>
