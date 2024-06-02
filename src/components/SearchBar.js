@@ -17,7 +17,9 @@ export function SearchBar() {
         />
       </Col>
       <Col xs="auto">
-        <Button type="submit">Submit</Button>
+        <Button variant="outline-success" type="submit">
+          Submit
+        </Button>
       </Col>
       <Col xs="auto">
         <SearchDropdown />
