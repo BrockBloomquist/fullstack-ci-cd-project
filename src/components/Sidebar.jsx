@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "../assets/stylesheets/styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import burger from "../assets/img/burger.svg";
+import logo from "../assets/img/Icon_BLACK.png";
+import home from "../assets/img/house-solid.svg";
+import { Button } from "react-bootstrap";
 
 const navItems = ["home", "settings"];
 
@@ -11,21 +14,20 @@ export const Sidebar = () => {
       <div className="inner">
         <header>
           <button
-            type="button"
             className="sidebar-burger"
+            variant="light"
             onClick={() => {
               setIsOpen(!isOpen);
             }}
           >
-            <span className="material-symbols-outlined">
-              {isOpen ? "close" : "menu"}
-            </span>
+            <img src={burger} />
           </button>
+          <h4>Sidebar</h4>
         </header>
         <nav>
           {navItems.map((item) => (
             <button key={item} type="button">
-              <span className="material-symbols-outlined">{item}</span>
+              <img href={home} />
               <p>{item}</p>
             </button>
           ))}
