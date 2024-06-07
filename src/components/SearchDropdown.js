@@ -5,7 +5,7 @@ export function SearchDropdown() {
   let [title, setTitle] = useState("Filter");
   let [users, setUsers] = useState([]);
   return (
-    <Dropdown>
+    <Dropdown className="d-flex justify-content-end">
       <Dropdown.Toggle variant="light" id="dropdown-basic">
         {title}
       </Dropdown.Toggle>

@@ -21,7 +21,7 @@ export function SearchBar() {
           Submit
         </Button>
       </Col>
-      <Col xs="auto">
+      <Col xs="auto" lg={2}>
         <SearchDropdown />
       </Col>
     </>
