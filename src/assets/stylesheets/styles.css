@@ -42,13 +42,21 @@
 
 .sidebar-burger {
   width: 44px;
-  height: 72px;
+  height: 44px;
   display: grid;
   place-items: center;
   color: #f9f9f9;
   background-color: transparent;
   border: transparent;
+  border-radius: 8px;
+  padding: 0 4px;
 }
+
+.sidebar-burger:hover {
+  opacity: 1;
+  background: rgb(0 0 0 / 30%);
+}
+
 .sidebar-burger img {
   position: absolute;
   width: 18px;
@@ -61,6 +69,7 @@
 
 .sidebar header > h4 {
   color: #f9f9f9;
+  margin-left: 5px;
 }
 
 .sidebar nav {
@@ -69,7 +78,7 @@
   gap: 2px;
 }
 
-.sidebar nav > button {
+.sidebar nav > a {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -85,12 +94,12 @@
   border: transparent;
 }
 
-.sidebar nav > button:hover {
+.sidebar nav > a:hover {
   opacity: 1;
   background: rgb(0 0 0 / 30%);
 }
 
-.sidebar:not(.open) nav > button:hover p {
+.sidebar:not(.open) nav > a:hover p {
   opacity: 1;
   background: rgb(0 0 0 / 70%);
   padding: 4px 8px;
@@ -99,16 +108,26 @@
 }
 
 .sidebar header > img,
-.sidebar nav > button p,
+.sidebar nav > a p,
 .sidebar header > h4 {
   opacity: 0;
-  transition: 0.25s;
+  transition: 0.15s;
 }
 
-.sidebar.open :is(nav button p, header > img, header > h4) {
+.sidebar.open :is(nav a p, header > img, header > h4) {
   opacity: 1;
 }
 
-.sidebar.open nav > button {
+.sidebar.open nav > a {
   width: 100%;
+}
+
+.sidebar.open :is(nav img, nav a p) {
+  width: 20px;
+}
+
+.sidebar nav > a p {
+  display: flex;
+  top: 5px;
+  margin: 0px;
 }
