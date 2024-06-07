@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../assets/stylesheets/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const navItems = ["home"];
+const navItems = ["home", "settings"];
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,14 +17,15 @@ export const Sidebar = () => {
               setIsOpen(!isOpen);
             }}
           >
-            <span>{isOpen ? "Close" : "menu"}</span>
+            <span className="material-symbols-outlined">
+              {isOpen ? "close" : "menu"}
+            </span>
           </button>
-          <FontAwesomeIcon icon="fa-solid fa-bars" />
         </header>
         <nav>
           {navItems.map((item) => (
             <button key={item} type="button">
-              <span>{item}</span>
+              <span className="material-symbols-outlined">{item}</span>
               <p>{item}</p>
             </button>
           ))}

@@ -11,9 +11,13 @@
   bottom: 20px;
   border-radius: 8px;
   width: 56px;
-  background: rgb(0 0 0 / 255);
+  background: rgb(0 0 0 / 25%);
   backdrop-filter: blur(10px);
   transition: width 0.45s;
+}
+
+.sidebar .material-symbols-outlined {
+  font-size: 20px;
 }
 
 .sidebar.open {
@@ -43,9 +47,53 @@
   place-items: center;
   color: #f9f9f9;
 }
+.sidebar header > img {
+  height: 18px;
+}
 
 .sidebar nav {
   display: grid;
   padding: 0 6px;
   gap: 2px;
+}
+
+.sidebar nav > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 0 12px;
+  border-radius: 8px;
+  opacity: 0.7;
+  color: #f9f9f9;
+}
+
+.sidebar nav > button:hover {
+  opacity: 1;
+  background: rgb(0 0 0 / 30%);
+}
+
+.sidebar:not(.open) nav > button:hover p {
+  opacity: 1;
+  background: rgb(0 0 0 / 70%);
+  padding: 4px 8px;
+  border-radius: 6px;
+  translate: 10px 0;
+}
+
+.sidebar header > img,
+.sidebar nav > button p {
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.sidebar.open :is(nav button p, header > img) {
+  opacity: 1;
+}
+
+.sidebar.open nav > button {
+  width: 100%;
 }
