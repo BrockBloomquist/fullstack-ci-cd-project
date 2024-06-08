@@ -1,6 +1,6 @@
 import Table from "react-bootstrap/Table";
 import { TableItem } from "./TableItem";
-export function SmallExample() {
+export function SmallExample({ setIsModalOpen }) {
   return (
     <Table striped bordered hover size="sm" className="overflow-auto">
       <thead>
@@ -9,22 +9,14 @@ export function SmallExample() {
           <th>Full Name</th>
           <th>Email</th>
           <th>Username</th>
+          <th>Details</th>
         </tr>
       </thead>
       <tbody className="m-3">
-        <TableItem />
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>jacon@test.com</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry the Bird</td>
-          <td>larry@test.com</td>
-          <td>@twitter</td>
-        </tr>
+        <TableItem n={1} setIsModalOpen={setIsModalOpen} />
+        <TableItem n={2} setIsModalOpen={setIsModalOpen} />
+        <TableItem n={3} setIsModalOpen={setIsModalOpen} />
+        <TableItem n={4} setIsModalOpen={setIsModalOpen} />
       </tbody>
     </Table>
   );

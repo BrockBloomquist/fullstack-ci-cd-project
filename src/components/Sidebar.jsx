@@ -27,7 +27,7 @@ export const Sidebar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                <img src={burger} />
+                <img src={burger} alt="burger-icon" />
               </button>
               <h4>Navigation</h4>
             </header>

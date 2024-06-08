@@ -1,8 +1,11 @@
-export function TableItem() {
-  let n = 1;
-  let fullName = "Mark";
-  let email = "otto@test.com";
-  let username = "@mdo";
+import { Button } from "react-bootstrap";
+import "../assets/stylesheets/styles.css";
+
+export let fullName = "Mark";
+export let email = "otto@test.com";
+export let username = "@mdo";
+
+export function TableItem({ n, setIsModalOpen }) {
   return (
     <>
       <tr>
@@ -10,6 +13,16 @@ export function TableItem() {
         <td>{fullName}</td>
         <td>{email}</td>
         <td>{username}</td>
+        <td>
+          <Button
+            className="details-button"
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+          >
+            User Details
+          </Button>
+        </td>
       </tr>
     </>
   );
