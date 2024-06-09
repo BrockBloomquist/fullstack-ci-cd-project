@@ -22,7 +22,9 @@ function App() {
     <>
       <Sidebar />
       <Banner setIsModalOpen={setIsModalOpen} />
-      {isModalOpen && <MainPageModal />}
+      {isModalOpen && (
+        <MainPageModal isModalOpen={isModalOpen} onClose={closeModal} />
+      )}
     </>
   );
 }

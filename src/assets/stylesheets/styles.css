@@ -155,15 +155,25 @@
   align-items: center;
   justify-content: center;
 }
+
 .modal-content {
   border: 1px solid #fff;
   width: 500px;
   background-color: #fff;
   border-radius: 15px;
 }
+
 .modal-title {
   color: #6821c3;
   font-weight: 700;
   font-size: 30px;
   line-height: 20px;
+}
+.exit-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal-text {
+  text-align: justify;
 }
