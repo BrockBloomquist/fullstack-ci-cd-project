@@ -7,7 +7,7 @@ export const MainPageModal = ({ isModalOpen, onClose }) => {
       <section className="modal">
         <article className="modal-content p-lg-4">
           <div className="exit-icon text-end">
-            <IoMdClose onClick={onClose} />
+            <IoMdClose onClick={onClose} className="icon-x" />
           </div>
           <main className="modal-mainContents">
             <h5 className="modal-title">User</h5>

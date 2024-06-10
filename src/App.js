@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar openModal={openModal} />
       <Banner setIsModalOpen={setIsModalOpen} />
       {isModalOpen && (
         <MainPageModal isModalOpen={isModalOpen} onClose={closeModal} />
